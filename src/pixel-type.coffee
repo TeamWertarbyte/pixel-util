@@ -2,7 +2,7 @@
 Promise= require 'bluebird'
 
 imageType= require 'image-type'
-MimeLoader = require 'mime'
+MimeLoader = require './mime'
 mime= new MimeLoader({
   'image/vnd.ms-photo': ['jxr'],
   'image/jpeg': ['jpg'],
