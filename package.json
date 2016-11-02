@@ -36,7 +36,7 @@
   "dependencies": {
     "bluebird": "^2.9.27",
     "image-type": "^2.0.2",
-    "mime": "TeamWertarbyte/node-mime",
+    "mime": "github:teamwertarbyte/node-mime#3d7e1e8ef166944e91b23b6d76f6c1ca59703be3",
     "request": "^2.65.0"
   },
   "devDependencies": {
