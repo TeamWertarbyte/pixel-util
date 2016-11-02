@@ -16,7 +16,7 @@
     "start": "jasminetea --file index.coffee --watch './**/*.coffee' --timeout 1000",
     "localhost": "zuul test --ui jasmine2 --local 59798 --open",
 
-    "test": "jasminetea --file index.coffee --cover --report --lint",
+    "test": "jasminetea --file index.coffee --lint",
     "test-cloud": "zuul test",
 
     "prepublish": "node -e \"if(process.env.TRAVIS){}else{process.exit(1)}\" && npm run compile || echo skip prepublish",
@@ -36,7 +36,7 @@
   "dependencies": {
     "bluebird": "^2.9.27",
     "image-type": "^2.0.2",
-    "mime": "^1.3.4",
+    "mime": "TeamWertarbyte/node-mime",
     "request": "^2.65.0"
   },
   "devDependencies": {

@@ -2,13 +2,17 @@
 Promise= require 'bluebird'
 
 imageType= require 'image-type'
-mime= require 'mime'
-
-# Mime settings
-mime.define 'image/vnd.ms-photo':['jxr']
-mime.extensions['image/vnd.ms-photo']= 'jxr'
-mime.extensions['image/jpeg']= 'jpg'
-mime.extensions['image/tiff']= 'tif'
+MimeLoader = require 'mime'
+mime= new MimeLoader({
+  'image/vnd.ms-photo': ['jxr'],
+  'image/jpeg': ['jpg'],
+  'image/tiff': ['tif'],
+  'image/gif': ['gif'],
+  'image/png': ['png'],
+  'image/bmp': ['bmp'],
+  'image/webp': ['webp'],
+  'image/vnd.adobe.photoshop': ['psd']
+})
 
 # Public
 class PixelType
